@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simulation | HexBoxCAD - Indonesian CAD Service</title>
+<link rel="shortcut icon" href="images/Company_Logo_title_bar.png" type="image/png">
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+nav {
+  background-color: no;
+  border: 0px solid #dedede;
+  border-radius: 0px;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  width: 90%; 
+}
+
+  nav ul {
+	margin: 0;
+	padding: 0;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	color: #191818;
+	text-align: left;
+	text-align: left;
+  }
+
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+      
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+      
+      nav > ul > li > a > .caret {
+        border-top: 4px solid #212830;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+  
+        -webkit-transition: color 0.1s linear;
+     	  -moz-transition: color 0.1s linear;
+       	-o-transition: color 0.1s linear;
+          transition: color 0.1s linear; 
+      }
+
+      nav > ul > li > a {
+        color: #212830;
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+
+        nav > ul > li:hover {
+          background-color: rgb( 40, 44, 47 );
+        }
+
+        nav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+      
+      nav > ul > li > div {
+        background-color: rgb( 40, 44, 47 );
+        border-top: 0;
+        border-radius: 0 0 0px 0px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 165px;
+	visibility: hidden;
+	z-index: 100;
+  
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+
+        nav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          nav > ul > li > div ul > li {
+            display: block;
+          }
+
+            nav > ul > li > div ul > li > a {
+              color: #fff;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+
+              nav > ul > li > div ul > li:hover > a {
+                background-color: rgba( 255, 255, 255, 0.1);
+              }
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/voces:n4:default;anonymous-pro:n4:default;abel:n4:default.js" type="text/javascript"></script>
+
+</head>
+<body onLoad="MM_preloadImages('images/Static_simulation.png')">
+<table background="images/Header_Background.jpg" style="background-repeat:repeat-x ; background-position:top" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="137" scope="row"><table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th width="375" rowspan="5" align="center" valign="middle" scope="row"><a href="index.html"><img src="images/Company_Logo.png" width="320" height="110" alt=""/></a></th>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="right"><span style="text-align: right; color: #B5B5B5; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px;">(+62) 838-6962-2445 (INDONESIA) <img src="images/flag_indonesia.png" width="20" height="14" alt=""/></span></td>
+          </tr>
+          <tr>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="32">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="14" align="right" valign="bottom"><span style="text-align: right; color: #B5B5B5; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px;"><a target="_blank" href="http://hexboxcad.blogspot.co.id/"><img src="images/blogger_icon.png" width="18" height="18" alt=""/></a> <a target="_blank" href="https://www.facebook.com/Hexboxcad-1610366869216634"><img src="images/fb_icon.png" width="18" height="18" alt=""/></a> <a target="_blank" href="https://twitter.com/hexboxCADdesign"><img src="images/tw_icon.png" width="18" height="18" alt=""/></a></span></td>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th align="center" valign="middle" bgcolor="#B1B1B1" scope="col">
+      <table width="1200" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <th height="250" background="images/Simulation_header.png" style="background-repeat:no-repeat; background-position:center" scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" height="489" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="489" align="center" valign="top" scope="col"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th height="40" align="center" valign="bottom" bgcolor="#e6e6e6" scope="col"><table width="1200" height="40" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <th scope="col"> <nav>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="Profile.html">Profile</a></li>
+                      <li> <a href="#">Service <span class="caret"></span></a>
+                        <div>
+                          <ul>
+                            <li><a href="3D_CAD.html">3D CAD</a></li>
+                            <li><a href="2D_CAD.html">2D Drafting</a></li>
+                            <li><a href="Simulation.html">Simulation</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                  </th>
+                </tr>
+              </tbody>
+            </table></th>
+          </tr>
+        </tbody>
+      </table>
+        <table width="100%" height="40" border="0" align="center" cellpadding="0" background="images/Shadow_Header.png" style="background-repeat:repeat-x" cellspacing="0">
+          <tbody>
+            <tr>
+              <th align="center" valign="top" scope="col"> <table width="1200" height="40" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <th scope="col"><table width="1200" border="0" align="center" cellspacing="0" cellpadding="0" style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px;">
+                      <tbody>
+                        <tr>
+                          <th width="20" height="40" align="left" valign="middle" scope="col"><img src="images/pointer.png" width="20" height="40" alt=""/></th>
+                          <th width="10" align="left" valign="middle" scope="col"><a href="index.html" style="text-decoration:none; color:#0d74e9">Home</a></th>
+                          <th width="20" align="left" scope="col"><img src="images/pointer.png" width="20" height="40" alt=""/></th>
+                          <th width="10" align="left" valign="middle" scope="col"><a href="Simulation.html" style="text-decoration:none; color:#0d74e9">Simulation</a></th>
+                          <th width="20" align="left" scope="col">&nbsp;</th>
+                          <th width="80" align="left" valign="middle" scope="col"><a href="Simulation.html" style="text-decoration:none; color:#0d74e9"></a></th>
+                          <th align="left" valign="middle" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #212830;" scope="col">&nbsp;</th>
+                        </tr>
+                      </tbody>
+                    </table></th>
+                  </tr>
+                </tbody>
+              </table></th>
+            </tr>
+          </tbody>
+        </table>
+        <table width="1200" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td width="60" rowspan="2" align="center" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col">&nbsp;</td>
+              <td width="500" rowspan="2" align="center" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col"><a href="Portfolio/Static_Structural_Simulation.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Static_simulation','','images/Static_simulation.png',1)"><img src="images/Static_simulation_dark.png" alt="" width="500" height="271" id="Static_simulation"></a></td>
+              <td width="60" height="30" align="left" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col">&nbsp;</td>
+              <td width="20" align="center" valign="middle" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #5B5D62;" scope="col">+</td>
+              <td colspan="2" align="left" valign="middle" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #5B5D62;" scope="col">Static Structural Mechanic Simulation</td>
+            </tr>
+            <tr>
+              <td height="283" colspan="2" align="left" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col">&nbsp;</td>
+              <td width="20" align="left" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col">&nbsp;</td>
+              <td align="left" valign="top" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; text-align: justify;" scope="col"><table width="540" height="221" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="left" valign="top" scope="col"><p>Simulations conducted to sdetermine the strength of a structure  using Finite Element Method. Because of the limitations of our computer systems we provide simulation services for personal, smalls to medium-sized companies. We work using Solidworks simulation  and ANSYS 14.</p>
+                      <p>For the desiging process  itself takes between 3 hours - 10 hours based on the level of complexity.</p></td>
+                  </tr>
+                  <tr>
+                    <th align="left" valign="top" scope="col">&nbsp;</th>
+                  </tr>
+                  <tr>
+                    <td height="97" align="left" valign="top" scope="col"><p><em>Simulasi dilakukan untuk mengetahui kekuatan dari sebuah struktur yang dirancang menggunakan Metode Elemen Hingga. Karena keterbatasan  sistem komputer kami menyedakan jasa simulasi untuk personal, perusahaan kecil hingga menengah. Untuk pengerjaan kami menggunakan perangkat lunak Solidworks simulation dan ANSYS 14.</em></p>
+                      <p><em>Untuk pengerjaan sendiri membutuhkan waktu antara 5 jam - 30 jam berdasarkan tingkat kerumitan. </em></p></td>
+                  </tr>
+                </tbody>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="21" colspan="6" align="center" valign="middle" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;" scope="col">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="4" background="Images/Footer_spacer_background_03.png" bgcolor="#BBBDBC" style="background-repeat:repeat-x" scope="col">&nbsp;</th>
+    </tr>
+    <tr>
+      <th align="center" valign="top" bgcolor="#BBBDBC" style="background-repeat: repeat-x; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #525151; font-weight: 5; font-size: 12px;" scope="col"><table width="800" align="center" border="0" cellspacing="0" cellpadding="0" style="text-shadow: 1px 1px 1px #F4F4F4;">
+        <tbody>
+          <tr>
+            <th width="34" height="20" align="left" valign="top" scope="col"><a href="Profile.html" style="color: #525151; text-decoration:none;" class="TagDatelink" ></a></th>
+            <th width="195" align="left" valign="top" scope="col"><a href="Contact.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Contact</a></th>
+            <th width="50" rowspan="4" align="left" valign="top" background="images/Footer_Sparator.png" style="background-position:center; background-repeat:no-repeat" scope="col"></th>
+            <th width="72" align="left" valign="top" scope="col">&nbsp;</th>
+            <th width="165" align="left" valign="top" scope="col"><a href="3D_CAD.html" style="color: #525151; text-decoration:none" class="TagDatelink">3D CAD</a></th>
+            <th width="50" rowspan="4" align="left" valign="top" background="images/Footer_Sparator.png" style="background-position:center; background-repeat:no-repeat" scope="col">&nbsp;</th>
+            <th width="50" align="left" valign="top" scope="col"></th>
+            <th width="184" align="left" valign="top" scope="col"><a target="_blank" href="https://www.facebook.com/Hexboxcad-1610366869216634" style="color: #525151; text-decoration:none" class="TagDatelink">Facebook</a></th>
+          </tr>
+          <tr>
+            <th height="20" align="left" valign="top" scope="col"><a href="Contact.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th height="20" align="left" valign="top" scope="col"><a href="Payment_Info_English.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Payment Info</a></th>
+            <th width="72" align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col"><a href="2D_CAD.html" style="color: #525151; text-decoration:none;" class="TagDatelink">2D CAD</a></th>
+            <th width="50" align="left" valign="top" scope="col"><a href="http://hexboxcad.blogspot.co.id" style="color: #525151; text-decoration:none" class="TagDatelink"></a></th>
+            <th align="left" valign="top" scope="col"><a target="_blank" href="http://hexboxcad.blogspot.co.id" style="color: #525151; text-decoration:none" class="TagDatelink">Blogspot</a></th>
+          </tr>
+          <tr>
+            <th align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col"><a href="Profile.html" style="color: #525151; text-decoration:none;" class="TagDatelink" >Profile</a><a href="Payment_Info_English.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th width="72" height="20" align="left" valign="top" scope="col"><a href="Simulation.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th height="20" align="left" valign="top" scope="col"><a href="Simulation.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Simulation</a></th>
+            <th width="50" align="left" valign="top" scope="col"></th>
+            <th align="left" valign="top" scope="col"><a target="_blank" href="https://twitter.com/hexboxCADdesign" style="color: #525151; text-decoration:none;" class="TagDatelink">Twiiter</a></th>
+          </tr>
+          <tr>
+            <th height="20" align="left" valign="top" scope="col">&nbsp;</th>
+            <th height="20" align="left" valign="top" scope="col">&nbsp;</th>
+            <th width="72" align="left" valign="top" scope="col"><a href="Partner.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th align="left" valign="top" scope="col"><a href="Partner.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th width="50" align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table>
+        <table width="800" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <th height="25" scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table>
+      <table width="1200px" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th height="25" align="left" valign="top" scope="row"><span style="text-shadow: 1px 1px 1px #F4F4F4; font-size: 12px">Copyright @ 2015 hexBoxCAD. All right reserved</span></th>
+            </tr>
+          </tbody>
+        </table>
+      </th>
+    </tr> 
+  </tbody>
+</table>
+</body>
+</html>

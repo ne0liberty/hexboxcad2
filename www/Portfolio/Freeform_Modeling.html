@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<!--–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  jquery.mb.components                                                                                                                              –
+                                                                                                                                                    –
+  file: index.tmpl                                                                                                                                  –
+  last modified: 24/05/15 21.50                                                                                                                     –
+                                                                                                                                                    –
+  Open Lab s.r.l., Florence - Italy                                                                                                                 –
+                                                                                                                                                    –
+  email: matteo@open-lab.com                                                                                                                        –
+  site: http://pupunzi.com                                                                                                                          –
+        http://open-lab.com                                                                                                                         –
+  blog: http://pupunzi.open-lab.com                                                                                                                 –
+  Q&A:  http://jquery.pupunzi.com                                                                                                                   –
+                                                                                                                                                    –
+  Licences: MIT, GPL                                                                                                                                –
+     http://www.opensource.org/licenses/mit-license.php                                                                                             –
+     http://www.gnu.org/licenses/gpl.html                                                                                                           –
+                                                                                                                                                    –
+  Copyright (c) 2001-2015. Matteo Bicocchi (Pupunzi);                                                                                               –
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+    <title>Freeform Surface Modeling | HexBoxCAD - Indonesian CAD Service</title>
+    <link rel="shortcut icon" href="../images/Company_Logo_title_bar.png" type="image/png">
+    <link href="http://fonts.googleapis.com/css?family=Lekton|Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mb.thumbgallery.min.css?_v=1.3.1"/>
+	<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="jquery.mb.thumbGallery.min.js?_v=1.3.1"></script>
+
+    <style>
+        body, html {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            /*background: linear-gradient(135deg, #ffaa02 0%,#febf01 100%); *//* W3C */
+            background: linear-gradient(0deg, #CDCDCD 0%, #F1F1F1 100%);
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+
+nav {
+  background-color: no;
+  border: 0px solid #dedede;
+  border-radius: 0px;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  width: 90%; 
+}
+
+  nav ul {
+	margin: 0;
+	padding: 0;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	color: #191818;
+	text-align: left;
+	text-align: left;
+  }
+
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+      
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+      
+      nav > ul > li > a > .caret {
+        border-top: 4px solid #212830;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+  
+        -webkit-transition: color 0.1s linear;
+     	  -moz-transition: color 0.1s linear;
+       	-o-transition: color 0.1s linear;
+          transition: color 0.1s linear; 
+      }
+
+      nav > ul > li > a {
+        color: #212830;
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+
+        nav > ul > li:hover {
+          background-color: rgb( 40, 44, 47 );
+        }
+
+        nav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+      
+      nav > ul > li > div {
+        background-color: rgb( 40, 44, 47 );
+        border-top: 0;
+        border-radius: 0 0 0px 0px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 165px;
+	visibility: hidden;
+	z-index: 100;
+  
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+
+        nav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          nav > ul > li > div ul > li {
+            display: block;
+          }
+
+            nav > ul > li > div ul > li > a {
+              color: #fff;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+
+              nav > ul > li > div ul > li:hover > a {
+                background-color: rgba( 255, 255, 255, 0.1);
+              }
+			  
+        #wrapper{
+            padding: 20px;
+            max-width: 1024px;
+            width: 100%;
+            margin: auto;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Lobster', cursive;
+        }
+
+        label{
+            color: white;
+        }
+
+        /*custom overlay gradient */
+
+        .tg-placeHolder{
+            /*background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);*/
+            background: #000;
+        }
+
+        .tg-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.78) 0%, rgba(23, 23, 23, 0.60) 100%);
+        }
+
+
+        /******** DEMO SWITCHER *******/
+        #customize {
+            color: white;
+            text-align: right;
+            position: relative;
+            margin: auto;
+            width: 100%;
+            margin-bottom: 120px;
+        }
+
+        #customize input, #customize select {
+            font-size: 15px;
+            margin: 3px;
+            padding: 4px 4px 4px 8px;
+            border: 1px solid rgba(38, 41, 43, 0.44);
+            color:#fff;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        #customize select {
+            margin: 0;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            vertical-align: middle;
+        }
+
+        #customize label {
+            font-size: 13px;
+            margin: 3px 0;
+            padding: 3px 10px 3px 0;
+            /*width: 160px;*/
+            display: inline-block;
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .thumbGrid {
+            display: none;
+        }
+
+        @media (max-width: 500px) {
+            h1{
+                font-size: 30px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<body onLoad="MM_preloadImages('images/Main_Tab_2_overlay.png','images/Main_Tab_3_overlay.png','images/Main_Tab_4_overlay.png','images/Main_Tab_5_overlay.png','images/Main_Tab_6_overlay.png')">
+<table background="../images/Header_Background.jpg" style="background-repeat:repeat-x ; background-position:top" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="137" scope="row"><table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th width="375" rowspan="5" align="center" valign="middle" scope="row"><a href="../index.html"><img src="../images/Company_Logo.png" width="320" height="110" alt=""/></a></th>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="right"><span style="text-align: right; color: #B5B5B5; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px;">(+62) 838-6962-2445 (INDONESIA) <img src="../images/flag_indonesia.png" width="20" height="14" alt=""/></span></td>
+          </tr>
+          <tr>
+            <td align="right">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="32">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="14" align="right" valign="bottom"><span style="text-align: right; color: #B5B5B5; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px;"><a target="_blank" href="http://hexboxcad.blogspot.co.id/"><img src="../images/blogger_icon.png" width="18" height="18" alt=""/></a> <a target="_blank" href="https://www.facebook.com/Hexboxcad-1610366869216634"><img src="../images/fb_icon.png" width="18" height="18" alt=""/></a> <a target="_blank" href="https://twitter.com/hexboxCADdesign"><img src="../images/tw_icon.png" width="18" height="18" alt=""/></a></span></td>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="40" align="center" valign="bottom" bgcolor="#e6e6e6" scope="col"><table width="1200" height="40" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th scope="col"> <nav>
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Profile.html">Profile</a></li>
+                <li> <a href="#">Service <span class="caret"></span></a>
+                  <div>
+                    <ul>
+                      <li><a href="../3D_CAD.html">3D CAD</a></li>
+                      <li><a href="../2D_CAD.html">2D Drafting</a></li>
+                      <li><a href="../Simulation.html">Simulation</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="../Contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            </th>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" height="40" border="0" align="center" cellpadding="0" background="../images/Shadow_Header.png" style="background-repeat:repeat-x" cellspacing="0">
+  <tbody>
+    <tr>
+      <th align="center" valign="top" scope="col"> <table width="1200" height="40" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <th scope="col"><table width="1200" border="0" cellspacing="0" align="center" cellpadding="0" style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px;">
+              <tbody>
+                <tr>
+                  <th width="20" height="40" align="left" valign="middle" scope="col"><img src="../images/pointer.png" width="20" height="40" alt=""/></th>
+                  <th width="33" align="left" valign="middle" scope="col"><a href="../index.html" style="text-decoration:none; color:#0d74e9">Home</a></th>
+                  <th width="20" align="left" scope="col"><img src="../images/pointer.png" width="20" height="40" alt=""/></th>
+                  <th width="64" align="left" valign="middle" scope="col"><a href="../3D_CAD.html" style="text-decoration:none; color:#0d74e9">3D Design</a></th>
+                  <th width="20" align="left" scope="col"><img src="../images/pointer.png" width="20" height="40" alt=""/></th>
+                  <th width="263" align="left" valign="middle" scope="col"><a href="Freeform_Modeling.html" style="text-decoration:none; color:#0d74e9">Freeform Surface Modeling</a></th>
+                  <th width="73" align="left" valign="middle" style="font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; color: #212830;" scope="col">&nbsp;</th>
+                  <th width="707" align="left" valign="middle" scope="col">&nbsp;</th>
+                </tr>
+              </tbody>
+            </table></th>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th scope="col"><table width="1200" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <th scope="col"><section class="content">
+
+        <div id="thumbGrid"
+             class="thumbGrid"
+
+             data-thumbgrid="true"
+             data-nav_effect="slideInverse"
+             data-nav_delay="60"
+             data-nav_timing="1000"
+             data-nav_pagination="6"
+             data-gallery_effectnext="fadeIn"
+             data-gallery_effectprev="fadeOut"
+             data-gallery_fullscreenw="90%"
+             data-gallery_fullscreenh="90%"
+             data-gallery_cover="true">
+
+            <img src="img/Freeform_Surface_Modeling/LR/01.jpg" data-highres="img/Freeform_Surface_Modeling/HR/01.jpg" data-caption="Shaver 1"/>
+            <img src="img/Freeform_Surface_Modeling/LR/02.jpg" data-highres="img/Freeform_Surface_Modeling/HR/02.jpg" data-caption="Shaver 2"/>
+            
+        </div>
+    </section></th>
+          </tr>
+        </tbody>
+      </table></th>
+    </tr>
+  </tbody>
+</table>
+
+    <table width="100%" height="200" border="0" align="center" cellpadding="0" background="../images/Shadow_Header_3.png" style="background-repeat:repeat-x; background-position:bottom" cellspacing="0">
+  		<tbody>
+    		<tr>
+      			<th align="center" valign="top" scope="col"><table width="1200" border="0" cellspacing="0" cellpadding="0">
+      			  <tbody>
+      			    <tr>
+      			      <th scope="col">&nbsp;</th>
+   			        </tr>
+   			      </tbody>
+   			    </table></th>
+    		</tr>
+  		</tbody>
+	</table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th height="4" background="../Images/Footer_spacer_background_03.gif" bgcolor="#BBBDBC" style="background-repeat:repeat-x" scope="col">&nbsp;</th>
+    </tr>
+    <tr>
+      <th height="300" align="center" valign="top" bgcolor="#BBBDBC" style="background-repeat: repeat-x; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #525151; font-weight: 5; font-size: 12px;" scope="col"><table width="800" align="center" border="0" cellspacing="0" cellpadding="0" style="text-shadow: 1px 1px 1px #F4F4F4;">
+        <tbody>
+          <tr>
+            <th width="34" height="20" align="left" valign="top" scope="col"><a href="Profile.html" style="color: #525151; text-decoration:none;" class="TagDatelink" ></a></th>
+            <th width="195" align="left" valign="top" scope="col"><a href="../Contact.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Contact</a></th>
+            <th width="50" rowspan="4" align="left" valign="top" background="../images/Footer_Sparator.png" style="background-position:center; background-repeat:no-repeat" scope="col"></th>
+            <th width="72" align="left" valign="top" scope="col">&nbsp;</th>
+            <th width="165" align="left" valign="top" scope="col"><a href="../3D_CAD.html" style="color: #525151; text-decoration:none" class="TagDatelink">3D CAD</a></th>
+            <th width="50" rowspan="4" align="left" valign="top" background="../images/Footer_Sparator.png" style="background-position:center; background-repeat:no-repeat" scope="col">&nbsp;</th>
+            <th width="50" align="left" valign="top" scope="col"></th>
+            <th width="184" align="left" valign="top" scope="col"><a target="_blank" href="https://www.facebook.com/Hexboxcad-1610366869216634" style="color: #525151; text-decoration:none" class="TagDatelink">Facebook</a></th>
+          </tr>
+          <tr>
+            <th height="20" align="left" valign="top" scope="col"><a href="../Contact.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th height="20" align="left" valign="top" scope="col"><a href="../Payment_Info_English.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Payment Info</a></th>
+            <th width="72" align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col"><a href="../2D_CAD.html" style="color: #525151; text-decoration:none;" class="TagDatelink">2D CAD</a></th>
+            <th width="50" align="left" valign="top" scope="col"><a href="http://hexboxcad.blogspot.co.id" style="color: #525151; text-decoration:none" class="TagDatelink"></a></th>
+            <th align="left" valign="top" scope="col"><a target="_blank" href="http://hexboxcad.blogspot.co.id" style="color: #525151; text-decoration:none" class="TagDatelink">Blogspot</a></th>
+          </tr>
+          <tr>
+            <th align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col"><a href="../Profile.html" style="color: #525151; text-decoration:none;" class="TagDatelink" >Profile</a><a href="Payment_Info_English.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th width="72" height="20" align="left" valign="top" scope="col"><a href="Simulation.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th height="20" align="left" valign="top" scope="col"><a href="../Simulation.html" style="color: #525151; text-decoration:none;" class="TagDatelink">Simulation</a></th>
+            <th width="50" align="left" valign="top" scope="col"><a href="https://twitter.com/hexboxCADdesign" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th align="left" valign="top" scope="col"><a target="_blank" href="https://twitter.com/hexboxCADdesign" style="color: #525151; text-decoration:none;" class="TagDatelink">Twiiter</a></th>
+          </tr>
+          <tr>
+            <th height="20" align="left" valign="top" scope="col">&nbsp;</th>
+            <th height="20" align="left" valign="top" scope="col">&nbsp;</th>
+            <th width="72" align="left" valign="top" scope="col"><a href="Partner.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th align="left" valign="top" scope="col"><a href="Partner.html" style="color: #525151; text-decoration:none;" class="TagDatelink"></a></th>
+            <th width="50" align="left" valign="top" scope="col">&nbsp;</th>
+            <th align="left" valign="top" scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table>
+        <table width="800" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <th height="25" scope="col">&nbsp;</th>
+          </tr>
+        </tbody>
+      </table>
+      <table width="1200px" align="center" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th height="25" align="left" valign="top" scope="row"><span style="text-shadow: 1px 1px 1px #F4F4F4; font-size: 12px">Copyright @ 2015 hexBoxCAD. All right reserved</span></th>
+            </tr>
+          </tbody>
+        </table>
+      </th>
+    </tr> 
+  </tbody>
+</table>
+<script>
+
+    //   jQuery(function () {
+
+    var isIframe = function() {
+        var a = !1;
+        try {
+            self.location.href != top.location.href && ( a = !0 )
+        } catch ( b ) {
+            a = !0
+        }
+        return a
+    };
+    if ( !isIframe() ) {
+        var logo = $( "<a href='http://pupunzi.com/#mb.components/components.html' style='position:absolute;top:0;z-index:1000'><img id='logo' border='0' src='http://pupunzi.com/images/logo.png' alt='mb.ideas.repository'></a>" );
+        $( "#wrapper" ).prepend( logo ), $( "#logo" ).fadeIn()
+    }
+
+    /* Extend or modify effects */
+    jQuery.thumbGrid.transitions.fadeIn = {in: {x:"0", opacity:0, scale:0.9}, out: {x:0, opacity:0}};
+    jQuery.thumbGrid.transitions.fadeOut = {in: {x:"0", opacity:0}, out: {x:0, scale:0.9, opacity:0}};
+    jQuery.thumbGrid.transitions.slideLeft = {in: {x:$(window).width(), opacity:0}, out: {x:0, opacity:0}};
+    jQuery.thumbGrid.transitions.slideRight = {in: {x:0, opacity:0}, out: {x:$(window).width(), opacity:0}};
+
+    /* Initialize the gallery */
+    jQuery("#thumbGrid").thumbGrid();
+
+    /* customizer */
+    jQuery("#effect").on("change",function(){
+        var x = $(this).val();
+        jQuery("#thumbGrid").data("nav_effect", x);
+    });
+
+    jQuery("#delay").on("change",function(){
+        var x = parseFloat($(this).val());
+        jQuery("#thumbGrid").data("nav_delay", x);
+    });
+
+    jQuery("#timing").on("change",function(){
+        var x = parseFloat($(this).val());
+        jQuery("#thumbGrid").data("nav_timing", x);
+    });
+
+    /*
+     setTimeout(function(){
+     $(".thumbGrid").fadeTo(800,1)
+     },1000)
+     */
+
+    //   });
+
+</script>
+</body>
+</body>
+</html>
